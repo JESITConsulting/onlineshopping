@@ -9,7 +9,8 @@
    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
 	<context:component-scan base-package="net.jgw.onlineshopping.controller" />
-
+    <context:component-scan base-package="net.jgw.shoppingbackend.daoImpl" />
+   
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />

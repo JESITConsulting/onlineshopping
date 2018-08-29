@@ -1,10 +1,12 @@
 <div class="container">
-
+<div class="row">
+<div class="col-md-12">
 	<div>
-		 <h1 class="my-4">${title}</h1>
-		<br><hr />
-		<p>This is the content for the contact us page</p>
+	    <h1 class="my-4">${title}</h1>
+		<hr/>
+		<p class="myp">This is the content for the contact us page</p>
 
 	</div>
-
+</div>
+</div>
 </div>

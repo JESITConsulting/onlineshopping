@@ -31,11 +31,12 @@
         <!-- Bootstrap theme CSS -->
    <!-- 
    <link href="${css}/bootstrap.lumentheme.css" rel="stylesheet">
-     <link href="${css}/bootstrap.flatly.css" rel="stylesheet">
+     
       <link href="${css}/bootstrap.simplextheme.css" rel="stylesheet">
      <link href="${css}/bootstrap.literatheme.css" rel="stylesheet">
+       <link href="${css}/bootstrap.flatly.css" rel="stylesheet">
   -->       
-     <link href="${css}/bootstrap.flatly.css" rel="stylesheet">
+       <link href="${css}/bootstrap.flatly.css" rel="stylesheet">
   </head>
 
 <body>
@@ -56,8 +57,14 @@
     <c:if test ="${userClickContact == true }">
     <%@include file="contact.jsp" %>
     </c:if>
-    </div>
     
+    
+    <c:if test ="${userClickAllProducts == true or userClickCategoryProducts == true }">
+    <%@include file="listProducts.jsp" %>
+    </c:if>
+    </div>
+    </div>
+      
     <!-- Page footer -->
     <%@include file="./shared/footer.jsp" %>
     
@@ -68,7 +75,7 @@
     <!-- custom file -->
     <script src="${js}/myapp.js"></script>
   
-  </div>
+ 
   </body>
 
 </html>
