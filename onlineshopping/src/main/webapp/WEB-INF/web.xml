@@ -11,6 +11,11 @@
       <servlet-class>
          org.springframework.web.servlet.DispatcherServlet
       </servlet-class>
+      <init-param>
+      <!-- this is needed for the browser to throw exceptions -->
+      <param-name>throwExceptionIfNoHandlerFound</param-name>                 
+      <param-value>true</param-value>
+      </init-param>
    </servlet>
            
       <servlet-mapping>

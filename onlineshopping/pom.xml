@@ -10,10 +10,11 @@
 	<properties>
 		<javaee.version>7.0</javaee.version>
 		<spring.version>4.3.6.RELEASE</spring.version>
+		<!--  <hibernate.version>5.3.6.Final</hibernate.version> -->
 	</properties>
 	<dependencies>
-	
-		<!-- LINKIG BACKEND AND FRONTEND Projects -->
+	    
+		<!-- LINKING BACKEND AND FRONTEND Projects -->
 		<dependency>
 			<groupId>net.jgw</groupId>
 			<artifactId>shoppingbackend</artifactId>
@@ -37,6 +38,20 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- EXCLUDING spring core common logging -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+			<exclusions>
+			<exclusion>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+			</exclusion>
+			</exclusions>
+		</dependency>
+
+
 		<!-- SPRING MVC -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -50,8 +65,8 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-
 	</dependencies>
+
 
 	<build>
 		<plugins>
